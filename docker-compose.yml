@@ -1,0 +1,16 @@
+services:
+  devbox:
+    image: ghcr.io/OWNER/REPO:latest
+    container_name: openvscode-codex
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      OPENVSCODE_TOKEN: "change-this-long-token"
+      PLAYWRIGHT_BROWSERS_PATH: /home/openvscode-server/.cache/ms-playwright
+      HOME: /home/openvscode-server
+    volumes:
+      - ./workspace:/workspace
+      - ./home:/home/openvscode-server
+      - ./artifacts:/artifacts
+      - ./.codex:/home/openvscode-server/.codex
