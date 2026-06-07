@@ -14,4 +14,3 @@ Dieses Repo baut ein eigenes Docker-Image auf Basis von `gitpod/openvscode-serve
 - `Dockerfile`: das Custom Image
 - `docker-compose.yml`: Laufzeit auf dem VPS
 - `.codex/config.toml`: Codex + Playwright MCP
-- `.github/workflows/build-and-push.yml`: automatischer Build nach GHCR
